@@ -13,7 +13,7 @@ steps:
 - task: JfrogCli@1
   inputs:
     artifactoryService: 'Artifactory'
-    command: 'jfrog config'
+    command: 'jfrog rt config'
 - task: ArtifactoryMaven@2
   inputs:
     mavenPomFile: 'pom.xml'
