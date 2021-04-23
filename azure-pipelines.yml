@@ -10,6 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: JfrogCli@1
+  inputs:
+    artifactoryService: 'Artifactory'
+    command: 'jfrog config'
 - task: ArtifactoryMaven@2
   inputs:
     mavenPomFile: 'pom.xml'
